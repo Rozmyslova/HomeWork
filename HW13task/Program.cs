@@ -1,23 +1,24 @@
-﻿Console.Write("Enter number = ");
-double number = double.Parse(Console.ReadLine());
-double Kolvo = 1;
-Console.WriteLine(Kolvo);
-double DopPeremen = number;
-Console.WriteLine(DopPeremen);
-while (DopPeremen > 0)
+﻿/*Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+645 -> 5
+78 -> третьей цифры нет
+32679 -> 6*/
+Console.Write("Enter number = ");
+int number = int.Parse(Console.ReadLine());
+number = Math.Abs(number);
+int kolvo = 1;
+int DopPeremen = number;
+while ((DopPeremen / 10) > 0) 
 {
     DopPeremen = DopPeremen / 10;
-    Kolvo = 1 + Kolvo;
+    kolvo = kolvo +1;
 }
-Console.WriteLine(Kolvo);
-if (Kolvo <= 2)
+if (kolvo <= 2)
 {
     Console.WriteLine("No third digit");
 }
-else
+else 
 {
-    double AddAction = number / (Math.Pow(10, Kolvo - 3));
-    Console.WriteLine(AddAction);
-    double ThirdDigit = AddAction % 10;
-    Console.WriteLine("Third digit is " + ThirdDigit);
+    int AddVariable = Convert.ToInt32(Math.Truncate(number / (Math.Pow(10, kolvo - 3))));
+    int ThirdDigit = AddVariable % 10;
+    Console.WriteLine(ThirdDigit);
 }
