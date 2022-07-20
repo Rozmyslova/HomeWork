@@ -18,7 +18,7 @@ if (kolvo <= 2)
 }
 else 
 {
-    int AddVariable = Convert.ToInt32(Math.Truncate(number / (Math.Pow(10, kolvo - 3))));
+    int AddVariable = (int)(Math.Truncate(number / (Math.Pow(10, kolvo - 3))));
     int ThirdDigit = AddVariable % 10;
     Console.WriteLine(ThirdDigit);
 }
