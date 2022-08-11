@@ -6,7 +6,7 @@ int length = int.Parse(Console.ReadLine());
 double [] array = new double [length];
 FillArray(array);
 PrintArray(array);
-double result = MaxNum(array) - MinNum(array);
+double result = Math.Round ((MaxNum(array) - MinNum(array)), 2);
 Console.WriteLine("\nresult = " + result);
 
 
@@ -17,7 +17,7 @@ void FillArray(double[] array)
     double max = 100.0;
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = min + (random.NextDouble() * (max - min));
+        array[i] = Math.Round((min + (random.NextDouble() * (max - min))), 2);
     }
 }
 
