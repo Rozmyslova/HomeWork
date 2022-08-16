@@ -22,5 +22,5 @@ else
 {
     double x = Math.Round(((b2-b1)/(k1-k2)), 1);
     double y = k1*x + b1;
-    Console.WriteLine("Intersection point of two line: (" + x + "; " + y + ")");
+    Console.WriteLine("Intersection point of two lines: (" + x + "; " + y + ")");
 }
