@@ -13,19 +13,24 @@ if ((row < 0) || (column < 0))
 int [,] array = new int [row, column];
 FillArray(array);
 PrintArray(array);
-Console.Write("Enter element position (m, n by a space): ");
-string [] input = Console.ReadLine().Split();
-int m = int.Parse(input[0]);
-int n = int.Parse(input[1]);
-if ((m >= row) || (m < 0) || (n >= column) || (n < 0))
+Console.Write("Enter element position: ");
+int number = int.Parse(Console.ReadLine());
+if (number > (row * column))
 {
     Console.WriteLine("There isn`t this element in the array");
 }
-else 
+int length = row * column;
+int [] newArray = new int [length];
+int k = 0;
+for (int i = 0; i < row; i++)
 {
-    Console.WriteLine("This element is " + array[m,n]);
+    for (int j = 0; j < column; j++)
+    {
+    newArray[k] = array[i, j];
+    k++;
+    }
 }
-
+Console.WriteLine("The element which located on position " + number + " is " + newArray[number - 1]);
 
 void FillArray(int[,] array)
 {
