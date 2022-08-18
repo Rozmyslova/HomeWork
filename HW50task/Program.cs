@@ -1,7 +1,7 @@
 ﻿/* Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, 
 и возвращает значение этого элемента или же указание, что такого элемента нет. */
 
-Console.Write("Enter array dimension (rows, columns): ");
+Console.Write("Enter array dimension (rows, columns by a space): ");
 string [] inputArray = Console.ReadLine().Split();
 int row = int.Parse(inputArray[0]);
 int column = int.Parse(inputArray[1]);
@@ -13,7 +13,7 @@ if ((row < 0) || (column < 0))
 int [,] array = new int [row, column];
 FillArray(array);
 PrintArray(array);
-Console.Write("Enter element position (m, n): ");
+Console.Write("Enter element position (m, n by a space): ");
 string [] input = Console.ReadLine().Split();
 int m = int.Parse(input[0]);
 int n = int.Parse(input[1]);

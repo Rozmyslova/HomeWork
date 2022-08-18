@@ -1,7 +1,7 @@
 ﻿/* Задайте двумерный массив из целых чисел. 
 Найдите среднее арифметическое элементов в каждом столбце. */
 
-Console.Write("Enter array dimension (rows, columns): ");
+Console.Write("Enter array dimension (rows, columns by a space): ");
 string [] inputArray = Console.ReadLine().Split();
 int row = int.Parse(inputArray[0]);
 int column = int.Parse(inputArray[1]);
